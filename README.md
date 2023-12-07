@@ -11,9 +11,8 @@
        Ela pode fornecer gráficos para ajudar os usuários a tomar decisões informadas.
 
 ## **:busts_in_silhouette: - Membros da equipe:**
-- <a href="https://github.com/Marcos1701">*Marcos Eduardo*</a>
-- <a href="https://github.com/MrMorgam">*Gabriel Morais*</a>
 - <a href="https://github.com/erick7amorim">*Erick Amorim*</a>
+- <a href="https://github.com/MrMorgam">*Gabriel Morais*</a>
 
 ## :pushpin: - **Ferramentas de Gerenciamento de Projeto utilizadas:**
 
