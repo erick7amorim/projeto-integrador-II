@@ -1,0 +1,56 @@
+/* Orcamentos.css */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lista-orcamentos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orcamento-item {
+  background-color: #e0e0e0;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between; /* Adiciona espaço entre os elementos */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 8px;
+}
+
+.botoes-acoes {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.botoes-acoes-baixo-direita {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}

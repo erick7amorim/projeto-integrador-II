@@ -1,0 +1,39 @@
+.saldos-container {
+  display: flex;
+  flex-direction: column; /* Alterado para exibir os elementos em coluna */
+  align-items: center;
+  justify-content: space-around;
+  max-width: 70%;
+  margin: 20px auto;
+}
+
+.saldo,
+.gasto-mensal,
+.orcamento-mensal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%; /* Alterado para ocupar 100% da largura da coluna */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.saldo-valor {
+  font-size: 2rem; /* Aumentando o tamanho do valor */
+  font-weight: bold;
+  color: #2ecc71; /* Vermelho para despesas */
+}
+
+/* Adicione este estilo para o gasto mensal */
+.gasto-mensal-valor {
+  font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+  font-weight: bold;
+}
+
+#gastoMes{
+  color: #e74c3c; /* Vermelho para despesas */
+}

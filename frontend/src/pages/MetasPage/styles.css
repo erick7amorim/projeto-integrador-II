@@ -1,0 +1,89 @@
+#main {
+  text-align: center;
+}
+
+.meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.meta-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-content {
+  flex-grow: 1;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.valor-meta {
+  font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+  color: green;
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 8px;
+  display: inline-block; /* Isso faz com que a borda envolva apenas o conteúdo, não a linha inteira */
+}
+
+.submeta-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um fundo escuro semitransparente para destacar o modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submeta-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.submeta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.submeta-details {
+  flex: 1;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.submeta-actions {
+  text-align: right;
+}
+
+.submeta-progress {
+  margin-top: 10px;
+  text-align: left;
+}
