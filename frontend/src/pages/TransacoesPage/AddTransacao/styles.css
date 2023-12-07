@@ -3,7 +3,6 @@ label {
   margin-bottom: 8px;
 }
 
-/* Estilo dos campos de entrada */
 input {
   width: 100%;
   padding: 8px;
@@ -16,7 +15,6 @@ input {
   margin: 0 auto;
 }
 
-/* Estilo do botão de envio */
 button {
   background-color: #3498db;
   color: #fff;
@@ -26,7 +24,6 @@ button {
   cursor: pointer;
 }
 
-/* Estilo do botão de envio ao passar o mouse */
 button:hover {
   background-color: #2980b9;
 }

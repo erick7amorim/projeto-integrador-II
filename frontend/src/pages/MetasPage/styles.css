@@ -36,12 +36,12 @@
 }
 
 .valor-meta {
-  font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+  font-size: 1.5em;
   color: green;
   border: 2px solid green;
   border-radius: 8px;
   padding: 8px;
-  display: inline-block; /* Isso faz com que a borda envolva apenas o conteúdo, não a linha inteira */
+  display: inline-block;
 }
 
 .submeta-modal {
@@ -50,7 +50,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um fundo escuro semitransparente para destacar o modal */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
