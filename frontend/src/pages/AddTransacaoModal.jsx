@@ -46,8 +46,8 @@ const AddTransacaoModal = ({ onClose }) => {
         selectedCategoria
       );
 
-      onClose(); // Feche o modal após a criação da transação
-      setReloadData(true); // Acione a recarga de dados
+      onClose();
+      setReloadData(true);
     } catch (error) {
       console.log(error);
     }
@@ -75,7 +75,7 @@ const AddTransacaoModal = ({ onClose }) => {
 
         <label htmlFor="add-transacao-valor">Valor: </label>
         <input
-          type="text" // Mudar para tipo "text"
+          type="text"
           name="add-transacao-valor"
           id="add-transacao-valor"
           value={newTransacaoValor}

@@ -56,7 +56,6 @@ const MetasPage = () => {
       setCurrentMetaId(metaId);
       const selectedMeta = metas.find((meta) => meta.id === metaId);
 
-      // Garanta que a meta atual está definida corretamente
       setCurrentMeta(selectedMeta || null);
 
       const response = await submetasApi.getSubmetas('1', metaId);
@@ -74,13 +73,11 @@ const MetasPage = () => {
       await destroyMeta('1', meta.id);
       console.log('Meta excluída com sucesso:', meta.id);
 
-      // Remova a meta da lista local sem recarregar a página
       setMetas((prevMetas) => prevMetas.filter((item) => item.id !== meta.id));
       setCurrentMetaId(null);
 setCurrentMeta(null);
     } catch (error) {
       console.error('Erro ao excluir meta:', error);
-      // Exiba uma mensagem de erro ao usuário, se necessário
       alert('Erro ao excluir meta. Verifique o console para mais detalhes.');
     }
   };
@@ -90,11 +87,9 @@ setCurrentMeta(null);
       await submetasApi.deleteSubmeta('1', currentMetaId, submeta.id);
       console.log('Submeta excluída com sucesso:', submeta.id);
 
-      // Remova a submeta da lista local sem recarregar a página
       setSubmetas((prevSubmetas) => prevSubmetas.filter((item) => item.id !== submeta.id));
     } catch (error) {
       console.error('Erro ao excluir submeta:', error);
-      // Exiba uma mensagem de erro ao usuário, se necessário
       alert('Erro ao excluir submeta. Verifique o console para mais detalhes.');
     }
   };
@@ -108,13 +103,10 @@ setCurrentMeta(null);
         return;
       }
 
-      // Chame sua função de atualização aqui com o novo valor acumulado e o ID da meta
       await atualizarSaldoMeta('1', novoValorAcumulado, currentMetaId);
 
-      // Feche o modal após a atualização
       setIsAtualizarModalOpen(false);
 
-      // Recarregue as metas após a atualização do valor acumulado
       loadData();
     } catch (error) {
       console.error('Erro ao atualizar valor acumulado:', error);
@@ -135,7 +127,6 @@ setCurrentMeta(null);
           prevSubmetas.map((item) => (item.id === editedSubmeta.id ? editedSubmeta : item))
         );
 
-        // Feche o modal de edição
         setIsEditModalOpen(false);
       } else {
         console.error('ID da meta não definido');
@@ -146,7 +137,6 @@ setCurrentMeta(null);
   };
 
   const handleAddSubmeta = () => {
-    // Abra a janela modal para adicionar submeta
     setIsAddSubmetaModalOpen(true);
   };
 
@@ -156,11 +146,9 @@ setCurrentMeta(null);
         // Lógica para criar uma nova submeta utilizando submetaData
         await submetasApi.createSubmeta('1', currentMetaId, submetaData);
 
-        // Recarregue as submetas após a criação da nova submeta
         const response = await submetasApi.getSubmetas('1', currentMetaId);
         setSubmetas(response.data);
 
-        // Feche o modal de adição
         setIsAddSubmetaModalOpen(false);
       } else {
         console.error('ID da meta não definido');
@@ -178,20 +166,16 @@ setCurrentMeta(null);
 
 
   const handleAddMeta = () => {
-    // Abra a janela modal para adicionar meta
     setIsAddModalOpen(true);
   };
 
   const handleCreateMeta = async () => {
     try {
       console.log(metaData);
-      // Lógica para criar uma nova meta utilizando metaData
       await createMeta('1', metaData.nome, metaData.valor, metaData.data, metaData.descricao, metaData.valorDesejado);
 
-      // Recarregue as metas após a criação da nova meta
       loadData();
 
-      // Feche o modal de adição
       setIsAddModalOpen(false);
     } catch (error) {
       console.error('Erro ao criar meta:', error);

@@ -162,7 +162,7 @@ const OrcamentosPage = () => {
           <label>
             Data:
             <input
-              type="date"  // Troque para "date" se quiser um seletor de data
+              type="date"
               value={novaData}
               onChange={(e) => setNovaData(e.target.value)}
             />
@@ -195,7 +195,7 @@ const OrcamentosPage = () => {
           <label>
             Data:
             <input
-              type="date"  // Troque para "date" se quiser um seletor de data
+              type="date"
               value={novaData}
               onChange={(e) => setNovaData(e.target.value)}
             />

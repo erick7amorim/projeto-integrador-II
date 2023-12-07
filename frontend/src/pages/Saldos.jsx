@@ -8,7 +8,7 @@ import { getUsuarios, getOrcamentos, getGastosDoUsuarioMesAtual, atualizarSaldoU
 
 import './styles.css';
 
-Modal.setAppElement('#root'); // Defina o elemento raiz do aplicativo para o modal
+Modal.setAppElement('#root');
 
 const Saldos = ({ saldo2 }) => {
   const [saldo, setSaldo] = useState([]);

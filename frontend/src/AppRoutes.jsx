@@ -4,7 +4,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Nav from "./pages/Nav"; // Importe o componente Nav
+import Nav from "./pages/Nav";
 import MainPage from "./pages/MainPage";
 import MetasPage from "./pages/MetasPage";
 import OrcamentosPage from "./pages/OrcamentosPage";
@@ -18,7 +18,7 @@ const AppRoutes = () => {
   return (
     <Router>
       <div>
-        <Nav /> {/* Inclua o componente Nav fora das rotas */}
+        <Nav />
         <Routes>
           <Route exact path="/" element={<MainPage />} />
           <Route exact path="/metas" element={<MetasPage />} />

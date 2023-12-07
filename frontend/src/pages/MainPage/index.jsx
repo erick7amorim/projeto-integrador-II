@@ -5,7 +5,7 @@ import Saldos from '../Saldos';
 import AddTransacaoModal from '../AddTransacaoModal';
 import Nav from '../Nav';
 
-// Componente fictício de Modal para entrada do nome da categoria
+
 const Modal = ({ isOpen, onClose, onSave }) => {
   const [categoriaNome, setCategoriaNome] = useState('');
 
@@ -110,7 +110,7 @@ const MainPage = () => {
 
   const handleDeleteTransacao = async (transacaoId, tipo) => {
     try {
-      const userId = '1'; // Substitua pelo ID do usuário apropriado
+      const userId = '1';
 
       // Obtém os detalhes da transação que será excluída
       const response = await getTransacaoEspecifica(userId, transacaoId);
@@ -138,7 +138,7 @@ const MainPage = () => {
 
   const recalculateSaldo = async () => {
     try {
-      const userId = '1'; // Substitua pelo ID do usuário apropriado
+      const userId = '1';
 
       // Chama o serviço para obter as transações do usuário
       const response = await getTransacoes(userId);
@@ -217,7 +217,7 @@ const MainPage = () => {
 
   const handleAdicionarSaldo = async () => {
     try {
-      const userId = '1'; // Substitua pelo ID do usuário apropriado
+      const userId = '1';
 
       // Solicitar o novo saldo ao usuário
       const novoSaldoInput = prompt('Digite o novo saldo:');
@@ -253,8 +253,6 @@ const MainPage = () => {
           <h2 className="transactions-title">Últimas Movimentações</h2>
           <button onClick={toggleModalOpen}>Expandir</button>
           <button onClick={toggleAddTransacaoModal}>Adicionar Transação</button>
-          {/* Novo botão Adicionar Saldo */}
-          {/* Novo botão Criar Categoria */}
           <button onClick={toggleCategoriaModal}>Criar Categoria</button>
 
           <Modal isOpen={categoriaModalOpen} onClose={toggleCategoriaModal} onSave={handleCriarCategoria} />
@@ -271,7 +269,6 @@ const MainPage = () => {
                   {transaction.tipo === 'saida' ? '-' : '+'} R$ {Math.abs(transaction.valor)}
                 </div>
 
-                {/* Botão para excluir transação */}
                 <button onClick={() => handleDeleteTransacao(transaction.id, transaction.tipo)}>Deletar</button>
               </div>
             ))}

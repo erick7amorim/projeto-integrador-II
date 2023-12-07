@@ -17,7 +17,7 @@ const AddTransacao = () => {
   useEffect(() => {
     const fetchCategorias = async () => {
       try {
-        const response = await getCategorias('1'); // Substitua pelo método real para obter categorias
+        const response = await getCategorias('1');
         setCategorias(response.data);
         setNewTransacaoTipo('entrada');
       } catch (error) {
@@ -30,7 +30,7 @@ const AddTransacao = () => {
 
   const handleTipoChange = (event) => {
     console.log(event.target.value);
-    setNewTransacaoTipo(event.target.value); // Atualiza o estado com o valor selecionado
+    setNewTransacaoTipo(event.target.value);
   };
 
   const handleLogout = () => {
